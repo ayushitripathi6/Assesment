@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WebAppAssesment.Models.Student>
+
+@{
+    ViewBag.Title = "Display";
+    
+}
+
+<h2>Display</h2>
+<h2>Total Student:@ViewBag.Total</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SContact)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SContact)
+        </td>
+      
+    </tr>
+}
+
+</table>
