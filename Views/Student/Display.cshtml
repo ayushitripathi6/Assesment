@@ -5,13 +5,13 @@
     
 }
 
-<h2>Display</h2>
-<h2>Total Student:@ViewBag.Total</h2>
+<h2 class="bg-primary">Display</h2>
+<h2 class="bg-info text-white">Total Student:@ViewBag.Total</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table bg-success text-white" >
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.SId)
